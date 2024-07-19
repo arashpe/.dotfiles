@@ -25,7 +25,7 @@ alias hoho='ssh root@213.108.240.244 -p 3887'
 alias msstart='mysql.server start'
 alias msstop='mysql.server stop'
 alias phpactor='~/.local/bin/phpactor'
-
+alias rng='ranger'
 
 function phpm() {
 	php artisan make:model $1 -m

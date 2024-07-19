@@ -6,4 +6,14 @@ return {
       table.insert(opts.ensure_installed, "prettier")
     end,
   },
+  {
+    "folke/flash.nvim",
+    opts = {
+      modes = {
+        search = {
+          enabled = false,
+        },
+      },
+    },
+  },
 }

@@ -70,10 +70,14 @@ ENABLE_CORRECTION="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git web-search)
+plugins=(git web-search z)
 
 source $ZSH/oh-my-zsh.sh
 
+[[ -r ~/.zshrepo/znap/znap.zsh ]] ||
+    git clone --depth 1 -- \
+        https://github.com/marlonrichert/zsh-snap.git ~/.zshrepo/znap
+source ~/.zshrepo/znap/znap.zsh
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -129,3 +133,18 @@ export LC_CTYPE="en_US.UTF-8"
 
 
 export PATH=$PATH:/Users/hidden/.spicetify
+eval "$(zoxide init zsh)"
+source ~/.zshrepo/zsh-users/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+
+export NVM_DIR="$HOME/.config/nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+export PATH="/opt/homebrew/opt/postgresql@16/bin:$PATH"
+
+# bun completions
+[ -s "/Users/hidden/.bun/_bun" ] && source "/Users/hidden/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"

@@ -3,7 +3,6 @@ return {
   opts = {
     ensure_installed = {
       "bash-language-server",
-      "blade-formatter",
       "docker-compose-language-service",
       "dockerfile-language-server",
       "eslint_d",
@@ -20,6 +19,7 @@ return {
       "shfmt",
       "stylua",
       "tailwindcss-language-server",
+      "gopls",
     },
   },
 }
