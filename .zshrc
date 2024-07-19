@@ -116,7 +116,7 @@ source ~/.custom_commands.sh
 export TERM=xterm-256color
 
 
-eval "$(/opt/homebrew/bin/brew shellenv)"
+# eval "$(/opt/homebrew/bin/brew shellenv)"
 # symlink;
 
 eval "$(starship init zsh)"
@@ -134,6 +134,7 @@ export LC_CTYPE="en_US.UTF-8"
 
 export PATH=$PATH:/Users/hidden/.spicetify
 eval "$(zoxide init zsh)"
+
 source ~/.zshrepo/zsh-users/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 
